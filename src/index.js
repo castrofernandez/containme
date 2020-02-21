@@ -14,7 +14,7 @@ const DEFAULT_OPTIONS = {
 };
 
 const areParamsValid = (params) => setupme
-    .validate(DEFAULT_OPTIONS, params, {logName: LOG_NAME, strictly: false, deeply: false}).success;
+    .validate(DEFAULT_OPTIONS, params, {logName: LOG_NAME, strictly: true, deeply: false}).success;
 
 const mapDispatchToProps = (actions) => (dispatch) => bindActionCreators(actions, dispatch);
 
