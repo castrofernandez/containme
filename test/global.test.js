@@ -21,9 +21,22 @@ describe('containme', () => {
         defaultContainer({
             component: () => {},
             actions: {},
+            mapStateToProps: {},
             invalid: true,
         });
 
-        expect(console.error).to.be.calledOnceWith('[containme] The option "invalid" is not valid.');
+        expect(console.error).to.be.calledWith('[containme] The option "invalid" is not valid.');
+        expect(console.error).to.be
+            .calledWith('[containme] The option "mapStateToProps" is expected to be "function" but received as "object".');
+    });
+
+    it('valid parameters', () => {
+        defaultContainer({
+            component: () => {},
+            actions: {},
+            mapStateToProps: () => {},
+        });
+
+        expect(console.error).not.to.be.called;
     });
 });
