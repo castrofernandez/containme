@@ -102,11 +102,15 @@ __webpack_require__.r(__webpack_exports__);
 var App = function App(_ref) {
   var field = _ref.field,
       changeField = _ref.changeField;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "This is an example => \"", field, "\"."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "This is an example => \"", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    id: "label"
+  }, field), "\"."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    id: "btn1",
     onClick: function onClick() {
       return changeField('One');
     }
   }, "One"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    id: "btn2",
     onClick: function onClick() {
       return changeField('Two');
     }
